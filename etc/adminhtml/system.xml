@@ -2,27 +2,34 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="st-rewards" translate="label" sortOrder="200">
+        <tab id="sweettooth-rewards" translate="label" sortOrder="200">
             <label>Sweettooth</label>
         </tab>
         <section id="sweettooth-settings" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Sweettooth Settings</label>
-            <tab>st-rewards</tab>
-            <resource>ST_Rewards::configuration</resource>
-            <group id="api-settings" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+            <tab>sweettooth-rewards</tab>
+            <resource>Sweettooth_Rewards::configuration</resource>
+            <group id="api-settings" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>API Settings</label>
-                <field id="app-site" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <field id="app-site" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>App Site</label>
                 </field>
-                <field id="public-key" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                <field id="public-key" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Channel Public Key</label>
                 </field>
-                <field id="secret-key" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                <field id="secret-key" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Channel Secret Key</label>
                 </field>
-            </group>       
-           
+            </group>
+            <group id="display-settings" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Display Settings</label>
+                <field id="show-points-balance" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Points Balance in Header</label>
+                    <backend_model>Magento\Catalog\Model\Indexer\Product\Flat\System\Config\Mode</backend_model>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
         </section>
     </system>
 </config>

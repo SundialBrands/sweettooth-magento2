@@ -6,6 +6,9 @@
             <api-settings>
                 <app-site>//cdn.sweettooth.io/assets/storefront.js</app-site>
             </api-settings>
+            <display-settings>
+                <show-points-balance>1</show-points-balance>
+            </display-settings>
         </sweettooth-settings>
     </default>
 </config>

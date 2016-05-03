@@ -7,7 +7,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="ST_Rewards::configuration" title="Sweettooth Settings" />
+                            <resource id="Sweettooth_Rewards::configuration" title="Sweettooth Settings" />
                         </resource>
                     </resource>
                 </resource>

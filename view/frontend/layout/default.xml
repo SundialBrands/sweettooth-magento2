@@ -2,10 +2,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="header.links">
-            <block class="Magento\Customer\Block\Account\Customer" name="points.balance" template="ST_Rewards::html/balance.phtml" before="customer" />
+            <block class="Sweettooth\Rewards\Block\Balance" name="points.balance" template="Sweettooth_Rewards::html/balance.phtml" before="customer" />
         </referenceBlock>
         <referenceContainer name="footer">
-            <block class="ST\Rewards\Block\Tab" name="points.tab" template="ST_Rewards::html/tab.phtml" />
+            <block class="Sweettooth\Rewards\Block\Tab" name="points.tab" template="Sweettooth_Rewards::html/tab.phtml" />
         </referenceContainer>
     </body>
 </page>

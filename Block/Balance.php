@@ -9,9 +9,9 @@ use \Magento\Store\Model\ScopeInterface;
 use \Magento\Framework\App\ObjectManager;
 
 /**
- * Sweettooth Tab Block
+ * Sweettooth Balance Block
  */
-class Tab extends MagentoTemplate
+class Balance extends MagentoTemplate
 {
     protected $scopeConfig;
     protected $customerSession;
@@ -37,41 +37,12 @@ class Tab extends MagentoTemplate
     }
     
     /**
-     * Fetch the API endpoint
-     * @return string
+     * Should we show the points balance?
+     * @return bool
      */
-    public function getSite()
+    public function showPointsBalance()
     {
-        return $this->scopeConfig->getValue('sweettooth-settings/api-settings/app-site', ScopeInterface::SCOPE_STORE);
-    }
-    
-    /**
-     * Fetch the public channel key
-     * @return string
-     */
-    public function getChannelKey()
-    {
-        return $this->scopeConfig->getValue('sweettooth-settings/api-settings/public-key', ScopeInterface::SCOPE_STORE);
-    }
-    
-    /**
-     * Fetch the logged in customer id
-     * @return int
-     */
-    public function getCustomerId()
-    {
-        return $this->getCustomerSession()->getCustomerId();
-    }
-    
-    /**
-     * Generate the customer diggest
-     * @return string
-     */
-    public function getDigest()
-    {
-        $secretKey = $this->scopeConfig->getValue('sweettooth-settings/api-settings/secret-key', ScopeInterface::SCOPE_STORE);
-        $digest = $this->getCustomerId() . $secretKey;
-
-        return md5($digest);
+        $isPointsBalanceEnbaled = $this->scopeConfig->getValue('sweettooth-settings/display-settings/show-points-balance', ScopeInterface::SCOPE_STORE);
+        return $isPointsBalanceEnbaled && $this->getCustomerSession()->isLoggedIn();
     }
 }
