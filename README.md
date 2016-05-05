@@ -2,7 +2,7 @@
 
 ## Installation Instructions
 
-Install via composer
+Navigate to your magento root folder and install the module via composer
 ```
 composer require "romeoc/sweettooth-magento2":"dev-master"
 ```
