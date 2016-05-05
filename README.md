@@ -4,7 +4,7 @@
 
 Install via composer
 ```
-composer require romeoc/sweettooth-magento2
+composer require "romeoc/sweettooth-magento2":"dev-master"
 ```
 
 Add `Sweettooth_Rewards` to your `app/etc/config.php`
@@ -25,4 +25,5 @@ Run database migrations
 php bin/magento setup:upgrade
 ```
 
-Create and connect your account at https://sweettoothrewards.com/
+Set your SweetTooth API credentials in the control panel (request for an account at https://sweettoothrewards.com/):
+`Control Panel -> Stores -> Configuration -> Sweet Tooth Settings`
