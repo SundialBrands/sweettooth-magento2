@@ -7,6 +7,10 @@ Install via composer
 composer require "romeoc/sweettooth-magento2":"dev-master"
 ```
 
+You may need to create a Magento 2 Access Key at https://developer.magento.com/customer/accessKeys/list/
+to run composer. As a note the the magento public key is the username and private key is the password.
+
+
 Add `Sweettooth_Rewards` to your `app/etc/config.php`
 ```php
 <?php
