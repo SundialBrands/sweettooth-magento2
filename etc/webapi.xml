@@ -7,4 +7,10 @@
             <resource ref="Magento_Sales::sales" />
         </resources>
     </route>
+    <route url="/V1/sweettooth/credentials/save" method="POST">
+        <service class="Sweettooth\Rewards\Api\CredentialsInterface" method="saveCreds"/>
+        <resources>
+            <resource ref="Sweettooth::rewards" />
+        </resources>
+    </route>
 </routes>

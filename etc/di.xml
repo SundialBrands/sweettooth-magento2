@@ -2,4 +2,5 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Sweettooth\Rewards\Api\Order\StatusInterface" type="Sweettooth\Rewards\Model\Order\Status" />
+    <preference for="Sweettooth\Rewards\Api\CredentialsInterface" type="Sweettooth\Rewards\Model\Credentials" />
 </config>
